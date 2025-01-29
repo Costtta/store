@@ -1,0 +1,3 @@
+select a color will be menu like this
+red-green-purple-yellow-orange-blue-black-brown
+and every menu item will take the color that it's name talk about
