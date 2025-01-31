@@ -10,7 +10,6 @@ import { NavLink as RouterLink } from "react-router";
 
 const Navbar = () => {
     const cartState = useSelector(state => state.cart)
-    console.log(cartState)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {

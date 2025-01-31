@@ -8,7 +8,6 @@ import  {useState}  from "react";
 
 const FilterClothes = () => {
     const filterState = useSelector(state => state.filter)
-    console.log(filterState)
     const dispatch = useDispatch()
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -19,27 +18,27 @@ const FilterClothes = () => {
         <Box component={'section'} id="products">
             <Container sx={{marginBlock: '3rem'}}>
                 <Typography variant="h5" fontWeight={'bold'} color="gray" textAlign={'center'}>Products</Typography>
-                <Box display={'flex'} justifyContent={'center'} marginBlock={'2rem'}>
-                    <Grid2 container spacing={1} flexDirection={{xs: 'column', sm: 'row'}} alignItems={'center'} justifyContent={'center'}>
-                        <Grid2 size={{xs: 12, sm: 6, md: 2}} justifyContent={'center'} display={'flex'}>
-                            <Button variant="outlined" color="black" onClick={() => dispatch(male())}>male</Button>
+                <Box marginBlock={'2rem'}>
+                    <Grid2 container spacing={1} flexDirection={{xs: 'column', sm: 'row'}} alignItems={'center'}>
+                        <Grid2>
+                            <Button variant="outlined" color="black" sx={{fontSize: {xs: '0.6rem', md: '0.8rem'}}} onClick={() => dispatch(male())}>male</Button>
                         </Grid2>
-                        <Grid2 size={{xs: 12, sm: 6, md: 2}} justifyContent={'center'} display={'flex'}>
-                            <Button variant="outlined" color="black" onClick={() => dispatch(female())}>female</Button>
+                        <Grid2 sx={{fontSize: {xs: '0.5rem', sm: '1rem'}}}>
+                            <Button variant="outlined" color="black" sx={{fontSize: {xs: '0.6rem', md: '0.8rem'}}} onClick={() => dispatch(female())}>female</Button>
                         </Grid2>
-                        <Grid2 size={{xs: 12, sm: 6, md: 2}} justifyContent={'center'} display={'flex'}>
-                            <Button variant="outlined" color="black" onClick={() => dispatch(highPrice())}>high price</Button>
+                        <Grid2 sx={{fontSize: {xs: '0.5rem', sm: '1rem'}}}>
+                            <Button variant="outlined" color="black" sx={{fontSize: {xs: '0.6rem', md: '0.8rem'}}} onClick={() => dispatch(highPrice())}>high price</Button>
                         </Grid2>
-                        <Grid2 size={{xs: 12, sm: 6, md: 2}} justifyContent={'center'} display={'flex'}>
-                            <Button variant="outlined" color="black" onClick={() => dispatch(lowPrice())}>Low Price</Button>
+                        <Grid2 sx={{fontSize: {xs: '0.5rem', sm: '1rem'}}}>
+                            <Button variant="outlined" color="black" sx={{fontSize: {xs: '0.6rem', md: '0.8rem'}}} onClick={() => dispatch(lowPrice())}>Low Price</Button>
                         </Grid2>
-                        <Grid2 size={{xs: 12, sm: 6, md: 2}} justifyContent={'center'} display={'flex'}>
+                        <Grid2 sx={{fontSize: {xs: '0.5rem', sm: '1rem'}}}>
                             <Button
                                 id="basic-button"
                                 aria-controls={open ? 'basic-menu' : undefined}
                                 aria-haspopup="true"
                                 aria-expanded={open ? 'true' : undefined}
-                                variant="outlined" color="black" onClick={(event) => {
+                                variant="outlined" color="black" sx={{fontSize: {xs: '0.6rem', md: '0.8rem'}}} onClick={(event) => {
                                     setAnchorEl(event.currentTarget);
                                 }}>select a color
                             </Button>
@@ -78,8 +77,8 @@ const FilterClothes = () => {
                                     </MenuItem>
                                 </Menu>
                         </Grid2>
-                        <Grid2 size={{xs: 12, sm: 6, md: 2}} justifyContent={'center'} display={'flex'}>
-                            <Button variant="outlined" color="black" sx={{fontWeight: "bold"}} onClick={() => dispatch(clearFilter())}>Clear filter</Button>
+                        <Grid2>
+                            <Button variant="outlined" color="black" sx={{fontSize: {xs: '0.6rem', md: '0.8rem'}}} onClick={() => dispatch(clearFilter())}>Clear filter</Button>
                         </Grid2>
                     </Grid2>
                 </Box>
