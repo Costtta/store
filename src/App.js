@@ -1,12 +1,11 @@
 import Slider from "./components/Slider";
 import Sales from "./components/Sales";
 import FilterClothes from "./components/FilterClothes";
-import { Route, Routes } from "react-router";
+import { Route, Routes, BrowserRouter } from "react-router";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { useEffect } from "react";
-import {BrowserRouter} from 'react-router'
 
 function App() {
   useEffect(() => {
