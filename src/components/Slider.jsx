@@ -10,12 +10,12 @@ const Slider = () => {
     const dispatch = useDispatch();
 
     return (
-        <Box marginTop={'80px'}>
+        <Box marginTop={'80px'} component={'section'} maxHeight={'852.500px'}>
             <Grid2 container justifyContent={'center'} size={12}>
                     {sliderData.map((index) => {
                         return(
                             <Grid2 key={parseInt(index.id)} sx={parseInt(index.id) === sliderIndex ? {display: 'block', transition: '0.3s', width: '100%', position: 'relative'} : {display: 'none', transition: '0.3s'}}>
-                                <img src={index.img} alt="" style={{width: '100%', height: 'calc(100vh - 150px)'}} loading="eager"/>
+                                <img src={index.img} alt="" style={{width: '100%', maxHeight: '772.500px'}} loading="eager"/>
                                 <Typography variant="body1" color="white" textAlign={'center'} sx={{position: 'absolute', top: '10%', left: '50%', transform: 'translateX(-50%)'}}>{index.text}</Typography>
                             </Grid2>
                         )
