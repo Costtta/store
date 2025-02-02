@@ -19,7 +19,7 @@ const FilterClothes = () => {
             <Container sx={{marginBlock: '3rem'}}>
                 <Typography variant="h5" fontWeight={'bold'} color="gray" textAlign={'center'}>Products</Typography>
                 <Box marginBlock={'2rem'}>
-                    <Grid2 container spacing={1} flexDirection={{xs: 'column', sm: 'row'}} alignItems={'center'}>
+                    <Grid2 container spacing={1} flexDirection={'row'} alignItems={'center'}>
                         <Grid2>
                             <Button variant="outlined" color="black" sx={{fontSize: {xs: '0.6rem', md: '0.8rem'}}} onClick={() => dispatch(male())}>male</Button>
                         </Grid2>
