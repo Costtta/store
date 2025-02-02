@@ -32,7 +32,7 @@ const Navbar = () => {
                     </RouterLink>
                     
                     <Box display={'flex'} alignItems={'center'} sx={{display: {xs: 'none', md: 'flex'}}}>
-                        <Button color="white" endIcon={<FavoriteBorderIcon />}><Link sx={{color: 'black', textDecoration: 'none'}} href='#products'>Products</Link></Button>
+                        <Button color="white" endIcon={<FavoriteBorderIcon />}><RouterLink style={{color: 'black', textDecoration: 'none'}} to={'/'}>Products</RouterLink></Button>
                         {/* <Button color="white" endIcon={<ShoppingBagOutlinedIcon />}>Shopping Bag <Typography color="white" bgcolor={'red'} borderRadius={'20px'} width={'25px'}>{cartState.length}</Typography></Button> */}
                         {/* <RouterLink to={'/cart'} style={{display: 'flex', alignItems: 'center', color: 'black', textDecoration: 'none'}}>Shopping Bag <Typography color="white" bgcolor={'red'} borderRadius={'20px'} width={'25px'}>{cartState.length}</Typography></RouterLink> */}
                         <RouterLink to={'/cart'} style={{color: 'black'}}>
