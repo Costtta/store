@@ -23,18 +23,12 @@ const Navbar = () => {
     return (
         <Box id= 'navbar'>
             <AppBar position="fixed">
-                {/* <Toolbar sx={{backgroundColor: 'black', justifyContent: 'center'}}>
-                    <Typography variant="h3">Welcome All</Typography>
-                </Toolbar> */}
                 <Toolbar sx={{backgroundColor: 'white', justifyContent: 'space-around', color: 'black'}} >
                     <RouterLink to={'/'}>
                         <img src={logo} alt="logo" height={'80px'} />
                     </RouterLink>
-                    
                     <Box display={'flex'} alignItems={'center'} sx={{display: {xs: 'none', md: 'flex'}}}>
-                        <Button color="white" endIcon={<FavoriteBorderIcon />}><RouterLink style={{color: 'black', textDecoration: 'none'}} to={'/'}>Products</RouterLink></Button>
-                        {/* <Button color="white" endIcon={<ShoppingBagOutlinedIcon />}>Shopping Bag <Typography color="white" bgcolor={'red'} borderRadius={'20px'} width={'25px'}>{cartState.length}</Typography></Button> */}
-                        {/* <RouterLink to={'/cart'} style={{display: 'flex', alignItems: 'center', color: 'black', textDecoration: 'none'}}>Shopping Bag <Typography color="white" bgcolor={'red'} borderRadius={'20px'} width={'25px'}>{cartState.length}</Typography></RouterLink> */}
+                        <Button color="white" endIcon={<FavoriteBorderIcon />}><Link sx={{color: 'black', textDecoration: 'none'}} href='#products'>Products</Link></Button>
                         <RouterLink to={'/cart'} style={{color: 'black'}}>
                             <Button color="black" endIcon={
                                 <Badge color="error" badgeContent={cartState.length}>
@@ -62,7 +56,7 @@ const Navbar = () => {
                             'aria-labelledby': 'basic-button',
                             }}>
                         <MenuItem>
-                            <Button color="white" endIcon={<FavoriteBorderIcon />}>Wish List</Button>
+                            <Button color="white" endIcon={<FavoriteBorderIcon />}>Products</Button>
                         </MenuItem>
                         <MenuItem>
                             <RouterLink to={'/cart'} style={{color: 'black'}}>

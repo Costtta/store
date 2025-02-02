@@ -15,7 +15,7 @@ const Slider = () => {
                     {sliderData.map((index) => {
                         return(
                             <Grid2 key={parseInt(index.id)} sx={parseInt(index.id) === sliderIndex ? {display: 'block', transition: '0.3s', width: '100%', position: 'relative'} : {display: 'none', transition: '0.3s'}}>
-                                <img src={index.img} alt="" style={{width: '100%', maxHeight: '772.500px'}} loading="eager"/>
+                                <img src={index.img} alt="shoes" style={{width: '100%', maxHeight: '772.500px'}} loading="eager"/>
                                 <Typography variant="body1" color="white" textAlign={'center'} sx={{position: 'absolute', top: '10%', left: '50%', transform: 'translateX(-50%)'}}>{index.text}</Typography>
                             </Grid2>
                         )

@@ -8,7 +8,7 @@ const Sales = () => {
                 <Box width={'80%'} margin={'auto'}>
                     <Typography color="red" bgcolor={'black'} textAlign={'center'}>SALES UP TO 50%</Typography>
                 </Box>
-                <img src={clothes} alt="clothes" style={{width: '100%', marginBlock: '1rem'}} />
+                <img src={clothes} alt="clothes" style={{width: '100%', marginBlock: '1rem'}} loading="lazy"/>
                 <Box width={'80%'} margin={'auto'}>
                     <Typography color="red" bgcolor={'black'} textAlign={'center'}>SALES UP TO 50%</Typography>
                 </Box>
